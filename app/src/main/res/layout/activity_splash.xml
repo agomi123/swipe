@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/id1"
+        android:padding="10dp"
+        android:src="@drawable/logo"/>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Simple Billing and payment App"
+         android:layout_centerHorizontal="true"
+         android:layout_below="@id/id1"
+         android:textSize="20sp"
+         android:fontFamily="@font/font1"
+         android:id="@+id/id2"
+         android:layout_marginTop="-30dp"
+         android:textColor="#FF5722"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id2"
+        android:id="@+id/id3"
+        android:indeterminateTint="#FF5722"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+</RelativeLayout>

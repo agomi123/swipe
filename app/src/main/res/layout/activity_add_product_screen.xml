@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddProductScreen">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Product to List"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:background="#CFCFCF"
+        android:layout_margin="10dp"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="10dp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/csd"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product type"
+                android:textColor="@color/black"
+                android:layout_marginLeft="8dp"
+                android:textSize="13sp"/>
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="write something..."
+                android:id="@+id/producttype"
+                android:layout_height="wrap_content">
+            </AutoCompleteTextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="8dp"
+                android:textSize="13sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/producttype"
+                android:layout_margin="8dp"
+                android:hint="Enter Product Name"
+                android:id="@+id/productname"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Price"
+                android:textColor="@color/black"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:textSize="13sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productname"
+                android:layout_margin="8dp"
+                android:hint="Enter Product Price"
+                android:inputType="numberDecimal"
+                android:id="@+id/productprice"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Price"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="13sp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/productprice"
+                android:layout_margin="8dp"
+                android:inputType="numberDecimal"
+                android:hint="Enter Product tax Rate"
+                android:id="@+id/productrate"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Product"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/csd"
+        android:layout_marginTop="10dp"
+        android:id="@+id/addproduct"
+        android:backgroundTint="#FF5722"/>
+    <ProgressBar
+        android:id="@+id/idLoadingPB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/addproduct"
+        android:layout_marginTop="20dp"
+        android:indeterminateTint="#FF5722"
+        android:visibility="gone" />
+
+</RelativeLayout>

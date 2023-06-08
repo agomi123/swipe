@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductListScreen">
+   <ProgressBar
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/id6"
+       android:layout_centerInParent="true"
+       android:indeterminateTint="#FF5722"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommened Product"
+        android:layout_marginTop="20dp"
+        android:textColor="#FF5722"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/id4"
+        android:fontFamily="@font/font7"
+        android:textSize="15dp"/>
+    <SearchView
+        android:id="@+id/simpleSearchView"
+        android:layout_below="@id/id4"
+        android:layout_width="match_parent"
+        android:queryHint="Search Here.."
+        android:background="#EFEEEE"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content" />
+
+       <GridView
+           android:id="@+id/idGVcourses"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:horizontalSpacing="6dp"
+           android:numColumns="2"
+           android:layout_below="@id/simpleSearchView"
+           android:verticalSpacing="6dp" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extFloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FF5722"
+        android:text="Add"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_baseline_add_24"
+        app:iconTint="@android:color/white" />
+</RelativeLayout>
